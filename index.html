@@ -1,217 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AR Consultoria</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
-</head>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Consultoria</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body{
-    font-family: 'Poppins', sans-serif;
-    background-image: url(./assets/environmental-protection-gf3cbf5a14_1920.jpg);
-    background-size: cover;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    body {
+      font-family: "Poppins", sans-serif;
+      background-image: url(./assets/environmental-protection-gf3cbf5a14_1920.jpg);
+      background-size: cover;
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-  /* .overlay{
-    background-image: url(./assets/environmental-protection-gf3cbf5a14_1920.jpg);
-    background-size: cover;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-  } */
+    .gridContainer {
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-rows: 80px 1fr 50px;
+    }
 
-  .gridContainer{    
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-rows: 80px 1fr 50px;
-  }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 30px;
+      color: white;
+      grid-row: 1 / 2;
+      background-color: rgba(5, 44, 1, 0.6);
+      /* box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75); */
+    }
 
-  header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    padding: 30px;
-    color: white;
-    grid-row: 1 / 2;
-    background-color: rgba(5, 44, 1, 0.6);
-    /* box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75); */
-  }
+    #btnLigar {
+      cursor: pointer;
+      background-color: rgb(0, 187, 45);
+      color: white;
+      padding: 10px 20px;
+      border: 0;
+      font-size: 16px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+      transition: 0.3s;
+    }
 
-  #btnLigar{
-    cursor: pointer;
-    background-color: rgb(0, 187, 45);
-    color: white;
-    padding: 10px 20px;
-    border: 0;
-    font-size: 16px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-    transition: 0.3s;
-  }
+    #btnLigar:hover {
+      background-color: white;
+      color: rgb(44, 187, 75);
+    }
 
-  #btnLigar:hover{
-    background-color: white;
-    color: rgb(44, 187, 75);
-  }
+    #btnLigar:active {
+      box-shadow: -2px -2px 5px 0px rgba(0, 0, 0, 0.75);
+    }
 
-  #btnLigar:active{
-    box-shadow: -2px -2px 5px 0px rgba(0,0,0,0.75);
-  }
+    #btnLigar i {
+      margin-right: 3px;
+      font-size: 14px;
+    }
 
-  #btnLigar i{
-    margin-right: 3px;
-    font-size: 14px;
-  }
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      grid-row: 2 / 3;
+      background-color: rgba(5, 44, 1, 0.6);
+      color: white;
+    }
 
-  main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-row: 2 / 3;
-    background-color: rgba(5, 44, 1, 0.6);
-    color: white;
-  }
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-row: 3 / 4;
+      box-shadow: -1px -1px 5px 0px rgba(0, 0, 0, 0.75);
+      background-color: rgba(5, 44, 1, 0.6);
+      color: white;
+      font-size: 12px;
+    }
 
-  footer{    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-row: 3 / 4;
-    box-shadow: -1px -1px 5px 0px rgba(0, 0, 0, 0.75);
-    background-color: rgba(5, 44, 1, 0.6);
-    color: white;
-    font-size: 12px;
-  }
+    #title {
+      text-align: center;
+      width: 400px;
+      font-weight: 300;
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
 
-  #title{
-    text-align: center;
-    width: 400px;
-    font-weight: 300;
-    font-size: 32px;
-    margin-bottom: 50px;
-  }
+    #title span {
+      font-weight: 700;
+    }
 
-  #title span{
-    font-weight: 700;
-  }
+    #subtitle {
+      text-align: center;
+      font-weight: 300;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
 
-  #subtitle{
-    text-align: center;
-    font-weight: 300;
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
+    #subtitle span {
+      font-weight: 700;
+    }
 
-  #subtitle span{
-    font-weight: 700;
-  }
+    a {
+      text-decoration: none;
+    }
 
-  a{
-    text-decoration: none;
-  }
+    #btnWhatsapp {
+      cursor: pointer;
+      background-color: rgb(0, 187, 45);
+      color: white;
+      padding: 10px 20px;
+      border: 0;
+      font-size: 16px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px 0px rgba(155, 155, 155, 0.75);
+      transition: 0.3s;
+      margin-right: 5px;
+    }
 
-  #btnWhatsapp{    
-    cursor: pointer;
-    background-color: rgb(0, 187, 45);
-    color: white;
-    padding: 10px 20px;
-    border: 0;
-    font-size: 16px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px 0px rgba(155, 155, 155, 0.75);
-    transition: 0.3s;
-    margin-right: 5px;
-  }
+    #btnWhatsapp:hover {
+      background-color: white;
+      color: rgb(44, 187, 75);
+    }
 
-  #btnWhatsapp:hover{
-    background-color: white;
-    color: rgb(44, 187, 75);
-  }
+    #btnWhatsapp:active {
+      box-shadow: -2px -2px 5px 0px rgba(155, 155, 155, 255.75);
+      background-color: rgb(0, 187, 45);
+      color: white;
+    }
 
-  #btnWhatsapp:active{
-    box-shadow: -2px -2px 5px 0px rgba(155,155,155,255.75);
-    background-color: rgb(0, 187, 45);
-    color: white;
-  }
+    #btnWhatsapp i {
+      margin-right: 3px;
+      font-size: 16px;
+    }
 
-  #btnWhatsapp i{
-    margin-right: 3px;
-    font-size: 16px;
-  }
+    #btnEmail {
+      cursor: pointer;
+      background-color: rgb(219, 74, 57);
+      color: white;
+      padding: 10px 20px;
+      border: 0;
+      font-size: 16px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px 0px rgba(155, 155, 155, 0.75);
+      transition: 0.3s;
+      margin-left: 5px;
+    }
 
-  #btnEmail{    
-    cursor: pointer;
-    background-color: rgb(219, 74, 57);
-    color: white;
-    padding: 10px 20px;
-    border: 0;
-    font-size: 16px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px 0px rgba(155, 155, 155, 0.75);
-    transition: 0.3s;
-    margin-left: 5px;
-  }
+    #btnEmail:hover {
+      background-color: white;
+      color: rgb(44, 187, 75);
+    }
 
-  #btnEmail:hover{
-    background-color: white;
-    color: rgb(44, 187, 75);
-  }
+    #btnEmail:active {
+      box-shadow: -2px -2px 5px 0px rgba(155, 155, 155, 0.75);
+      background-color: rgb(219, 74, 57);
+      color: white;
+    }
 
-  #btnEmail:active{
-    box-shadow: -2px -2px 5px 0px rgba(155,155,155,0.75);
-    background-color: rgb(219, 74, 57);
-    color: white;
-  }
+    #btnEmail i {
+      margin-right: 3px;
+      font-size: 16px;
+    }
+  </style>
 
-  #btnEmail i{
-    margin-right: 3px;
-    font-size: 16px;
-  }
+  <body>
+    <div class="gridContainer">
+      <div class="overlay"></div>
+      <header>
+        <div class="logo">AR Consultoria</div>
+        <a id="btnLigar" href="tel:5531984134024"
+          ><i class="fas fa-phone"></i> Ligue Agora</a
+        >
+      </header>
 
-</style>
+      <main>
+        <h2 id="title">Precisa de alguma <span>solução ambiental?</span></h2>
+        <h3 id="subtitle">a gente <span>resolve</span> pra você:</h3>
+        <div class="containerButtons">
+          <a
+            id="btnWhatsapp"
+            href="https://web.whatsapp.com/send/?phone=5531984134024"
+            target="_blank"
+            ><i class="fab fa-whatsapp"></i> Whatsapp</a
+          >
+          <a id="btnEmail" href="mailto:marcell@arconsultoria.eng.br"
+            ><i class="far fa-envelope"></i> E-mail</a
+          >
+        </div>
+      </main>
 
-<body>
-
-  
-  <div class="gridContainer">
-    <div class="overlay"></div>
-    <header>
-      <div class="logo">AR Consultoria</div>
-      <a id="btnLigar" href="tel:5531984134024"><i class="fas fa-phone"></i> Ligue Agora</a>
-    </header> 
-
-    <main>
-      <h2 id="title">Precisa de alguma <span>solução ambiental?</span></h2>
-      <h3 id="subtitle">a gente <span>resolve</span> pra você:</h3>
-      <div class="containerButtons">
-        <a id="btnWhatsapp" href="https://web.whatsapp.com/send/?phone=5531984134024" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-        <a id="btnEmail" href="mailto:marcell@arconsultoria.eng.br"><i class="far fa-envelope"></i> E-mail</a>
-      </div>
-    </main>
-
-    <footer>
-      &copy; 2022 | Direitos reservados | Belo Horizonte - Minas Gerais
-    </footer>
-  </div>
-  
-</body>
+      <footer>
+        &copy; 2022 | Direitos reservados | Belo Horizonte - Minas Gerais
+      </footer>
+    </div>
+  </body>
 </html>
